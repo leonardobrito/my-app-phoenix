@@ -2,8 +2,8 @@ use Mix.Config
 
 # Configure your database
 config :my_app, MyApp.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "leonardo",
+  password: "root",
   database: "my_app_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
@@ -16,3 +16,6 @@ config :my_app, MyAppWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+# bcrypt
+config :bcrypt_elixir, :log_rounds, 4
