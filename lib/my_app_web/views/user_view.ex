@@ -19,10 +19,7 @@ defmodule MyAppWeb.UserView do
   def render("sign_in.json", %{user: user}) do
     %{
       data: %{
-        user: %{
-          id: user.id,
-          email: user.email
-        }
+        user: render_one(user, UserView, "user.json")
       }
     }
   end
